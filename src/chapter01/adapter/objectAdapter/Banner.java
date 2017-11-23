@@ -1,4 +1,4 @@
-package chapter01.adapter.classAdapter;
+package chapter01.adapter.objectAdapter;
 
 
 public class Banner {
