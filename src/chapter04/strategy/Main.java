@@ -23,7 +23,7 @@ public class Main {
                 player2.win();
                 player1.lose();
             } else {
-                System.out.println("Even");
+                System.out.println("Even...");
                 player1.even();
                 player2.even();
             }
