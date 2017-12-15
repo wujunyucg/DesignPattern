@@ -11,8 +11,9 @@ public abstract class Support {
         this.name = name;
     }
 
-    public void setNext(Support next) {
+    public Support setNext(Support next) {
         this.next = next;
+        return next;
     }
 
     public final void support(Trouble trouble) {
