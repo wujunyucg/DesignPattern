@@ -2,6 +2,7 @@ package chapter03.builder;
 
 public class TextBilder extends Builder {
     private StringBuffer buffer = new StringBuffer();
+
     @Override
     void makeTitle(String title) {
         buffer.append("===============================\n");
@@ -17,7 +18,7 @@ public class TextBilder extends Builder {
 
     @Override
     void makeItems(String[] items) {
-        for(int i = 0; i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             buffer.append("    ." + items[i] + "\n");
         }
         buffer.append("\n");

@@ -1,7 +1,5 @@
 package chapter04.strategy;
 
-import jdk.nashorn.internal.runtime.regexp.joni.constants.CCSTATE;
-
 import java.util.Random;
 
 public class ProbStrategy implements Strategy {
@@ -17,6 +15,7 @@ public class ProbStrategy implements Strategy {
             {1, 1, 1},
             {1, 1, 1},
     };
+
     public ProbStrategy(int seed) {
         random = new Random(seed);
     }
@@ -25,7 +24,7 @@ public class ProbStrategy implements Strategy {
     public Hand nextHand() {
         int bet = random.nextInt(getSum(currentHandValue));
         int handValue = 0;
-        if(bet < history[currentHandValue][0]) {
+        if (bet < history[currentHandValue][0]) {
             handValue = 0;
         } else if (bet < history[currentHandValue][1]) {
             handValue = 1;
@@ -39,7 +38,7 @@ public class ProbStrategy implements Strategy {
 
     private int getSum(int hv) {
         int sum = 0;
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
             sum += history[hv][i];
         }
         return sum;
@@ -47,7 +46,7 @@ public class ProbStrategy implements Strategy {
 
     @Override
     public void study(boolean win) {
-        if(win) {
+        if (win) {
             history[prevHandValue][currentHandValue]++;
         } else {
             history[prevHandValue][(currentHandValue + 1) % 3]++;

@@ -28,9 +28,11 @@ public class HtmlWriter {
     public void link(String href, String caption) throws IOException {
         paragraph("<a href=\"" + href + "\">" + caption + "</a>");
     }
+
     public void mailto(String mailaddr, String userName) throws IOException {
-        link("mailto"+mailaddr, userName);
+        link("mailto" + mailaddr, userName);
     }
+
     public void close() throws IOException {
         writer.write("</body>");
         writer.write("</html>\n");

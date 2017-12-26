@@ -1,7 +1,6 @@
 package chapter02.factoryMethod.framework;
 
 
-
 public abstract class Factory {
     public final Product create(String owner) {
         Product p = createProduct(owner);
@@ -10,5 +9,6 @@ public abstract class Factory {
     }
 
     protected abstract Product createProduct(String owner);
+
     protected abstract void registerProduct(Product product);
 }

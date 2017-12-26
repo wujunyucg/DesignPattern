@@ -14,13 +14,13 @@ public class WinningStrategy implements Strategy {
     //上一局的手势
     private Hand prevHand;
 
-    public WinningStrategy(int  seed) {
+    public WinningStrategy(int seed) {
         this.random = new Random(seed);
     }
 
     @Override
     public Hand nextHand() {
-        if(!won) {
+        if (!won) {
             prevHand = Hand.getHand(random.nextInt(3));
         }
         return prevHand;

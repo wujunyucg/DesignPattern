@@ -21,7 +21,7 @@ public class Memento {
         return money;
     }
 
-   List<String> getFruits() {
+    List<String> getFruits() {
         return (List<String>) fruits.clone();
     }
 }

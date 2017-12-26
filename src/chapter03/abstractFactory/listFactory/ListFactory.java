@@ -18,6 +18,6 @@ public class ListFactory extends Factory {
 
     @Override
     public Page createPage(String title, String author) {
-        return new ListPage(title,author);
+        return new ListPage(title, author);
     }
 }

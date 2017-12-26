@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 public class HtmlBuilder extends Builder {
     private String fileName;
     private PrintWriter writer;
+
     @Override
     void makeTitle(String title) {
         fileName = title + ".html";
@@ -27,7 +28,7 @@ public class HtmlBuilder extends Builder {
     @Override
     void makeItems(String[] items) {
         writer.println("<ul>");
-        for(int i = 0; i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             writer.println("<li>" + items[i] + "</li>");
         }
         writer.println("</ul>");

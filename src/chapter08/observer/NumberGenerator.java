@@ -1,7 +1,5 @@
 package chapter08.observer;
 
-import chapter08.observer.Observer;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

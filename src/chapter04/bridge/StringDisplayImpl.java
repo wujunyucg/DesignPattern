@@ -1,8 +1,5 @@
 package chapter04.bridge;
 
-import java.io.OutputStream;
-import java.util.Calendar;
-
 public class StringDisplayImpl extends DisplayImpl {
     private String string;
     private int width;
@@ -29,7 +26,7 @@ public class StringDisplayImpl extends DisplayImpl {
 
     private void printLine() {
         System.out.print("+");
-        for(int i = 0; i < width; i++) {
+        for (int i = 0; i < width; i++) {
             System.out.print("-");
         }
         System.out.println("+");

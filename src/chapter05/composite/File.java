@@ -1,7 +1,7 @@
 package chapter05.composite;
 
 //Leaf 角色
-public class File extends Entry{
+public class File extends Entry {
 
     //文件名
     private String name;
@@ -13,17 +13,13 @@ public class File extends Entry{
         this.size = size;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     @Override
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -31,8 +27,12 @@ public class File extends Entry{
         return size;
     }
 
+    public void setSize(int size) {
+        this.size = size;
+    }
+
     @Override
     protected void printList(String prefix) {
-        System.out.println(prefix + "/" +this);
+        System.out.println(prefix + "/" + this);
     }
 }

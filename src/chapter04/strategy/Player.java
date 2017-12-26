@@ -22,6 +22,7 @@ public class Player {
         winCount++;
         gameCount++;
     }
+
     public void lose() {
         strategy.study(false);
         loseCount++;

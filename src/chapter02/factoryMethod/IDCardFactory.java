@@ -8,6 +8,7 @@ import java.util.List;
 
 public class IDCardFactory extends Factory {
     private List<String> owers = new ArrayList<>();
+
     @Override
     protected Product createProduct(String owner) {
         return new IDCard(owner);
@@ -15,7 +16,7 @@ public class IDCardFactory extends Factory {
 
     @Override
     protected void registerProduct(Product product) {
-        owers.add(((IDCard)product).getOwner());
+        owers.add(((IDCard) product).getOwner());
     }
 
     public List<String> getOwers() {

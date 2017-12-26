@@ -1,7 +1,7 @@
 package chapter01.adapter.objectAdapter;
 
 
-public class PrintBanner extends Print{
+public class PrintBanner extends Print {
 
     private Banner banner;
 

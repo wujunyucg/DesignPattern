@@ -15,6 +15,7 @@ public class Hand {
             "石头", "剪刀", "布"
     };
     private int handValue;//猜拳中出的值
+
     private Hand(int handValue) {
         this.handValue = handValue;
     }
@@ -22,19 +23,21 @@ public class Hand {
     public static Hand getHand(int handValue) {
         return hand[handValue];
     }
+
     //判断是否强于对方
     public boolean isStrongerThan(Hand hand) {
         return fight(hand) == 1;
     }
+
     //判断是否弱于对方
     public boolean isWeakerThan(Hand hand) {
         return fight(hand) == -1;
     }
 
     private int fight(Hand hand) {
-        if(this == hand) {
+        if (this == hand) {
             return 0;
-        } else if((this.handValue + 1) % 3 == hand.handValue) {
+        } else if ((this.handValue + 1) % 3 == hand.handValue) {
             return 1;
         } else {
             return -1;

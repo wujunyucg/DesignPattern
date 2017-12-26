@@ -1,7 +1,5 @@
 package chapter05.composite;
 
-import chapter03.builder.Director;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -32,7 +30,7 @@ public class Main {
             tomura.add(new File("game.doc", 400));
             tomura.add(new File("junk.doc", 500));
             rootDir.printList();
-        }catch (FileTreatmentException e) {
+        } catch (FileTreatmentException e) {
             e.printStackTrace();
         }
     }

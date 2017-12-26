@@ -15,7 +15,7 @@ public class BookShelfIterator implements Iterator {
     //根据书架中现有书本的数量判断
     @Override
     public boolean hasNext() {
-        if(index < bookShelf.getLength()) {
+        if (index < bookShelf.getLength()) {
             return true;
         } else {
             return false;

@@ -7,12 +7,12 @@ import java.util.Random;
 
 // 表示游戏主人公
 public class Gamer {
-    private int money; //所持金钱
-    private List<String> fruits = new ArrayList<>();    //所获得的水果
-    private Random random = new Random();   //随机数生成器
     private static String[] fruitsName = {
             "苹果", "葡萄", "香蕉", "橘子",
     };
+    private int money; //所持金钱
+    private List<String> fruits = new ArrayList<>();    //所获得的水果
+    private Random random = new Random();   //随机数生成器
 
     public Gamer(int money) {
         this.money = money;
@@ -39,6 +39,7 @@ public class Gamer {
         }
 
     }
+
     // 拍摄快照
     public Memento createMemento() {
         Memento m = new Memento(money);
@@ -51,8 +52,9 @@ public class Gamer {
         }
         return m;
     }
+
     // 撤销
-    public void restoreMemento(Memento memento ) {
+    public void restoreMemento(Memento memento) {
         this.money = memento.money;
         this.fruits = memento.fruits;
     }
@@ -65,9 +67,10 @@ public class Gamer {
                 ", random=" + random +
                 '}';
     }
+
     private String getFruit() {
         String prefix = "";
-        if(random.nextBoolean()) {
+        if (random.nextBoolean()) {
             prefix = "好吃的";
         }
         return prefix + fruitsName[random.nextInt(fruitsName.length)];

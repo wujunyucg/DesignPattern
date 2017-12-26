@@ -1,6 +1,6 @@
 package chapter03.prototype;
 
-public class MessageBox implements Product{
+public class MessageBox implements Product {
 
     private char decoChar;
 
@@ -11,12 +11,12 @@ public class MessageBox implements Product{
     @Override
     public void use(String s) {
         int length = s.getBytes().length;
-        for(int i = 0; i < length + 4; i++) {
+        for (int i = 0; i < length + 4; i++) {
             System.out.print(decoChar);
         }
         System.out.println();
         System.out.println(decoChar + " " + s + " " + decoChar);
-        for(int i = 0; i < length + 4; i++) {
+        for (int i = 0; i < length + 4; i++) {
             System.out.print(decoChar);
         }
         System.out.println();

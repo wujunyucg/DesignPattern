@@ -7,6 +7,7 @@ public class Banner {
     public Banner(String string) {
         this.string = string;
     }
+
     public void showWithPattern() {
         System.out.println("(" + string + ")");
     }

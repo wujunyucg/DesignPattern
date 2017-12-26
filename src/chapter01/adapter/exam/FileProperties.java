@@ -3,7 +3,7 @@ package chapter01.adapter.exam;
 import java.io.*;
 import java.util.Properties;
 
-public class FileProperties extends FileIO{
+public class FileProperties extends FileIO {
     Properties properties;
 
     public FileProperties() {
@@ -12,7 +12,7 @@ public class FileProperties extends FileIO{
 
     @Override
     public void readFromFile(String filename) throws IOException {
-        InputStream stream = new FileInputStream(filename) ;
+        InputStream stream = new FileInputStream(filename);
         properties.load(stream);
     }
 

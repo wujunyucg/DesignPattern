@@ -3,6 +3,7 @@ package chapter02.templateMethod;
 public class StringDisplay extends AbstractDisplay {
     private String string;
     private int width;
+
     public StringDisplay(String string) {
         this.string = string;
         this.width = string.getBytes().length;
@@ -25,7 +26,7 @@ public class StringDisplay extends AbstractDisplay {
 
     private void printLine() {
         System.out.print("+");
-        for(int i = 0; i < width; i++) {
+        for (int i = 0; i < width; i++) {
             System.out.print("-");
         }
         System.out.println("+");

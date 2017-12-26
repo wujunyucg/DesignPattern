@@ -1,13 +1,16 @@
 package chapter03.abstractFactory;
 
-import chapter03.abstractFactory.factory.*;
+import chapter03.abstractFactory.factory.Factory;
+import chapter03.abstractFactory.factory.Link;
+import chapter03.abstractFactory.factory.Page;
+import chapter03.abstractFactory.factory.Tray;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String line  = scanner.nextLine();
+        String line = scanner.nextLine();
         Factory factory = Factory.getFactory(line);
         Link people = factory.createLink("人民日报", "http://www.people.com.cn");
         Link gmw = factory.createLink("光明日报", "http://www.gwm.cn/");
